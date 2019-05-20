@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 14:51+0800\n"
+"POT-Creation-Date: 2019-05-20 15:47+0800\n"
 "PO-Revision-Date: 2018-08-10 10:42+0800\n"
 "Last-Translator: BaiJiangjie <bugatti_it@163.com>\n"
 "Language-Team: Language locale/en/LC\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: coco/app.py:182
+#: coco/app.py:172
 msgid "Connect idle more than {} minutes, disconnect"
 msgstr ""
 
@@ -41,8 +41,8 @@ msgstr ""
 #: coco/interactive.py:90
 #, python-brace-format
 msgid ""
-"{T}2) Enter {green}/{end} + {green}IP, Hostname{end} or {green}Comment {end} "
-"search, such as: /ip.{R}"
+"{T}2) Enter {green}/{end} + {green}IP, Hostname, ProjectName{end} or {green}"
+"Comment {end} search, such as: /ip.{R}"
 msgstr ""
 
 #: coco/interactive.py:91
@@ -111,51 +111,55 @@ msgstr ""
 msgid "LoginAs"
 msgstr ""
 
+#: coco/interactive.py:266
+msgid "Environment"
+msgstr ""
+
 #: coco/interactive.py:280
 msgid "Comment"
 msgstr ""
 
-#: coco/interactive.py:290
+#: coco/interactive.py:292
 msgid "Page: {}, Count: {}, Total Page: {}, Total Count: {}"
 msgstr ""
 
-#: coco/interactive.py:296
+#: coco/interactive.py:298
 msgid "Tips: Enter the asset ID and log directly into the asset."
 msgstr ""
 
-#: coco/interactive.py:298
+#: coco/interactive.py:300
 msgid "Page up: P/p"
 msgstr ""
 
-#: coco/interactive.py:299
+#: coco/interactive.py:301
 msgid "Page down: Enter|N/n"
 msgstr ""
 
-#: coco/interactive.py:300
+#: coco/interactive.py:302
 msgid "BACK: b/q"
 msgstr ""
 
-#: coco/interactive.py:371
+#: coco/interactive.py:373
 msgid "No Nodes"
 msgstr ""
 
-#: coco/interactive.py:375
+#: coco/interactive.py:377
 msgid "Node: [ ID.Name(Asset amount) ]"
 msgstr ""
 
-#: coco/interactive.py:377
+#: coco/interactive.py:379
 msgid "Tips: Enter g+NodeID to display the host under the node, such as g1"
 msgstr ""
 
-#: coco/interactive.py:385
+#: coco/interactive.py:387
 msgid "There is no matched node, please re-enter"
 msgstr ""
 
-#: coco/interactive.py:415
+#: coco/interactive.py:417
 msgid "Select a login:: "
 msgstr ""
 
-#: coco/interactive.py:438
+#: coco/interactive.py:440
 msgid "No system user"
 msgstr ""
 

@@ -87,7 +87,7 @@ class InteractiveServer:
         header = _("\n{T}{T}{title} {user}, {header_title} {end}{R}{R}")
         menu = [
             _("{T}1) Enter {green}ID{end} directly login or enter {green}part IP, Hostname, Comment{end} to search login(if unique).{R}"),
-            _("{T}2) Enter {green}/{end} + {green}IP, Hostname{end} or {green}Comment {end} search, such as: /ip.{R}"),
+            _("{T}2) Enter {green}/{end} + {green}IP, Hostname, ProjectName{end} or {green}Comment {end} search, such as: /ip.{R}"),
             _("{T}3) Enter {green}p{end} to display the host you have permission.{R}"),
             _("{T}4) Enter {green}g{end} to display the node that you have permission.{R}"),
             _("{T}5) Enter {green}g{end} + {green}NodeID{end} to display the host under the node, such as g1.{R}"),
@@ -189,7 +189,7 @@ class InteractiveServer:
         # 全匹配到则直接返回全匹配的
         if len(result) == 0:
             _result = [asset for asset in self.assets if is_obj_attr_eq(asset, q)]
-            if len(_result) == 1:
+            if len(_result) >= 1:
                 result = _result
 
         # 最后模糊匹配
@@ -263,7 +263,7 @@ class InteractiveServer:
         self.page = page
         sort_by = config["ASSET_LIST_SORT_BY"]
         self.results = sort_assets(assets, sort_by)
-        fake_data = [_("ID"), _("Hostname"), _("IP"), _("LoginAs")]
+        fake_data = [_("ID"), _("Hostname"), _("IP"), _("LoginAs"), _("Environment")]
         id_length = max(len(str(len(self.results))), 4)
         hostname_length = item_max_length(self.results, 15,
                                           key=lambda x: x.hostname)
@@ -279,10 +279,12 @@ class InteractiveServer:
         size_list.append(comment_length)
         fake_data.append(_("Comment"))
         self.client.send_unicode(wr(title(format_with_zh(size_list, *fake_data))))
+
         for index, asset in enumerate(self.results, 1):
             data = [
                 index, asset.hostname, asset.ip,
-                asset.system_users_name_list, asset.comment
+                asset.system_users_name_list, asset.environment, asset.comment
+                # asset.system_users_name_list, asset.comment
             ]
             self.client.send_unicode(wr(format_with_zh(size_list, *data)))
 

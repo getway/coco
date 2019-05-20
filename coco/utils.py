@@ -166,15 +166,18 @@ def is_obj_attr_has(obj, val, attrs=("hostname", "ip", "comment")):
     return False
 
 
-def is_obj_attr_eq(obj, val, attrs=("id", "hostname", "ip")):
+def is_obj_attr_eq(obj, val, attrs=("id", "hostname", "ip", "project_list")):
     if not attrs:
         vals = [val for val in obj.__dict__.values() if isinstance(val, (str, int))]
     else:
         vals = [getattr(obj, attr) for attr in attrs if hasattr(obj, attr)]
-
     for v in vals:
-        if str(v) == str(val):
-            return True
+        if type(v) is list:
+            if str(val) in v:
+                return True
+        else:
+            if str(v) == str(val):
+                return True
     return False
 
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 14:51+0800\n"
+"POT-Creation-Date: 2019-05-20 15:47+0800\n"
 "PO-Revision-Date: 2018-08-10 10:42+0800\n"
 "Last-Translator: BaiJiangjie <bugatti_it@163.com>\n"
 "Language-Team: Language locale/zh\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: coco/app.py:182
+#: coco/app.py:172
 msgid "Connect idle more than {} minutes, disconnect"
 msgstr "空闲时间超过 {} 分钟，断开连接"
 
@@ -45,10 +45,10 @@ msgstr ""
 #: coco/interactive.py:90
 #, python-brace-format
 msgid ""
-"{T}2) Enter {green}/{end} + {green}IP, Hostname{end} or {green}Comment {end} "
-"search, such as: /ip.{R}"
+"{T}2) Enter {green}/{end} + {green}IP, Hostname, ProjectName{end} or {green}"
+"Comment {end} search, such as: /ip.{R}"
 msgstr ""
-"{T}2) 输入 {green}/{end} + {green}IP, 主机名{end} or {green}备注 {end}搜索. "
+"{T}2) 输入 {green}/{end} + {green}IP, 主机名, 项目名{end} or {green}备注 {end}搜索. "
 "如: /ip{R}"
 
 #: coco/interactive.py:91
@@ -83,7 +83,7 @@ msgstr "{T}7) 输入 {green}h{end} 帮助.{R}"
 #: coco/interactive.py:96
 #, python-brace-format
 msgid "{T}8) Enter {green}r{end} to refresh your assets and nodes.{R}"
-msgstr "{T}8) 输入 {green}r{end} 刷新最新的机器和节点信息.{R}"
+msgstr "{T}0) 输入 {green}r{end} 刷新最新的机器和节点信息.{R}"
 
 #: coco/interactive.py:97
 #, python-brace-format
@@ -118,51 +118,55 @@ msgstr ""
 msgid "LoginAs"
 msgstr "登录用户"
 
+#: coco/interactive.py:266
+msgid "Environment"
+msgstr ""
+
 #: coco/interactive.py:280
 msgid "Comment"
 msgstr "备注"
 
-#: coco/interactive.py:290
+#: coco/interactive.py:292
 msgid "Page: {}, Count: {}, Total Page: {}, Total Count: {}"
 msgstr "页码: {}, 数量: {}, 总页数: {}, 总数量: {}"
 
-#: coco/interactive.py:296
+#: coco/interactive.py:298
 msgid "Tips: Enter the asset ID and log directly into the asset."
 msgstr "提示: 输入资产ID，直接登录资产."
 
-#: coco/interactive.py:298
+#: coco/interactive.py:300
 msgid "Page up: P/p"
 msgstr "上一页: P/p"
 
-#: coco/interactive.py:299
+#: coco/interactive.py:301
 msgid "Page down: Enter|N/n"
 msgstr "下一页: Enter|N/n"
 
-#: coco/interactive.py:300
+#: coco/interactive.py:302
 msgid "BACK: b/q"
 msgstr "返回: B/b"
 
-#: coco/interactive.py:371
+#: coco/interactive.py:373
 msgid "No Nodes"
 msgstr "没有节点"
 
-#: coco/interactive.py:375
+#: coco/interactive.py:377
 msgid "Node: [ ID.Name(Asset amount) ]"
 msgstr "节点: [ ID.名称(资产数量) ]"
 
-#: coco/interactive.py:377
+#: coco/interactive.py:379
 msgid "Tips: Enter g+NodeID to display the host under the node, such as g1"
 msgstr "提示: 输入 g+节点ID 显示节点下主机. 如: g1"
 
-#: coco/interactive.py:385
+#: coco/interactive.py:387
 msgid "There is no matched node, please re-enter"
 msgstr "没有匹配分组，请重新输入"
 
-#: coco/interactive.py:415
+#: coco/interactive.py:417
 msgid "Select a login:: "
 msgstr "选择一个登录:"
 
-#: coco/interactive.py:438
+#: coco/interactive.py:440
 msgid "No system user"
 msgstr "没有系统用户"
 
